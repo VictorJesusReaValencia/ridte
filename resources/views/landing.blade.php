@@ -87,12 +87,12 @@
                             <div class="flex flex-wrap gap-6 pt-4">
                                 <a class="bg-primary text-white px-10 py-5 font-sans text-xs font-bold uppercase tracking-widest hover:bg-blue-700 transition-all flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                                     href="#corpus" style="">
-                                    Explorar Publicaciones Recientes <span class="material-symbols-outlined !text-sm"
+                                    Conoce nuestros proyectos <span class="material-symbols-outlined !text-sm"
                                         aria-hidden="true" style="">article</span>
                                 </a>
                                 <a class="border border-slate-300 dark:border-slate-700 px-10 py-5 font-sans text-xs font-bold uppercase tracking-widest hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                                     href="#corpus" style="">
-                                    Acceder al Repositorio de Datos <span class="material-symbols-outlined !text-sm"
+                                    Ver Directorio <span class="material-symbols-outlined !text-sm"
                                         aria-hidden="true" style="">database</span>
                                 </a>
                             </div>
@@ -100,29 +100,28 @@
                         <div class="lg:col-span-5 space-y-8">
                             <figure class="relative group">
                                 <img class="aspect-[4/5] w-full bg-slate-200 dark:bg-slate-800 object-cover object-center shadow-2xl"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK7hs85IpUfxMJ0wHoriTl7jQ_P-2yowxG0sodEhe-aEncDC70mi6nLNkjDO45Da8imIWBYDEpXsxJDgz3DYcbq7E7P5iKh3Pq5GVQotYsBb9Vbh-OxlZpeRwlkTJR8g77ukbgRztKTTEf7m1AnDiygldYoaxiWLxvUPfJ7CWCjpxqeYbp42T0WQ58XOka0I7PEzztlXDDhwN4Nsh0fOpQRcgl_lgPok2lYq_19Cn92EPVbyRiq0p_06uXWvc5iac9Ya8sBVeaxD19"
+                                    src="images/uan.jpg"
                                     alt="Observación participante en entornos de aprendizaje híbridos con interfaces colaborativas.">
                                 <figcaption
                                     class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-900 p-6 border border-slate-100 dark:border-slate-800 shadow-xl max-w-xs">
                                     <p class="font-sans text-[10px] uppercase tracking-widest text-primary font-bold mb-2"
-                                        style="">Evidencia de Campo</p>
+                                        style="">Ejemplo de texto</p>
                                     <p class="text-xs text-slate-500 leading-relaxed italic" style="">Fig 1.1:
-                                        Observación participante en entornos de aprendizaje híbridos mediado por
-                                        interfaces colaborativas.</p>
+                                        lore ipsum dolor sit amet .</p>
                                 </figcaption>
                             </figure>
                             <div class="grid grid-cols-2 gap-4 pt-12">
                                 <div class="border-t border-slate-200 pt-4">
                                     <p class="text-3xl font-heading font-bold text-slate-900 dark:text-white"
-                                        style="">45+</p>
-                                    <p class="font-sans text-[10px] uppercase tracking-tighter text-slate-500"
-                                        style="">Centros Asociados</p>
+                                        style="">14</p>
+                                    <p class="font-sans text-[14px] uppercase tracking-tighter text-slate-500"
+                                        style="">Cuerpos Académicos y Grupos de Investigación</p>
                                 </div>
                                 <div class="border-t border-slate-200 pt-4">
                                     <p class="text-3xl font-heading font-bold text-slate-900 dark:text-white"
-                                        style="">820</p>
-                                    <p class="font-sans text-[10px] uppercase tracking-tighter text-slate-500"
-                                        style="">Papers Publicados</p>
+                                        style="">3</p>
+                                    <p class="font-sans text-[14px] uppercase tracking-tighter text-slate-500"
+                                        style="">Universidades vinculadas (UAN, UDG, UACH)</p>
                                 </div>
                             </div>
                         </div>
