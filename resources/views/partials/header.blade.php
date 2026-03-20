@@ -13,7 +13,7 @@
                 <a class="font-sans font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-xs uppercase tracking-widest focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     href="{{ route('cuerpos-academicos') }}" style="">Cuerpos academicos</a>
                 <a class="font-sans font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-xs uppercase tracking-widest focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                    href="#nodos" style="">Investigación</a>
+                    href="{{ route('investigacion') }}" style="">Investigación</a>
                 <a class="font-sans font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-xs uppercase tracking-widest focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     href="#corpus" style="">Contacto</a>
             </nav>

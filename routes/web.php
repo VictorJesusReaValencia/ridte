@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/cuerpos-academicos', function () {
     return view('faculty');
 })->name('cuerpos-academicos');
+
+Route::get('/investigacion', function () {
+    return view('research');
+})->name('investigacion');
