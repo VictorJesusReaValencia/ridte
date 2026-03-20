@@ -19,35 +19,46 @@
 				</p>
 			</div>
 			<div class="flex mt-8 justify-center w-full">
-				<button
-					class="flex items-center gap-3 bg-white dark:bg-slate-900 text-primary px-8 py-3 rounded-full text-base font-bold hover:bg-primary hover:text-white transition-all border-2 border-primary shadow-lg">
+				<a
+					href="{{ asset('pdf/Mesa-Directiva-RIDTE.pdf') }}"
+					class="flex items-center gap-3 bg-white dark:bg-slate-900 text-primary px-8 py-3 rounded-full text-base font-bold hover:bg-primary hover:text-white transition-all border-2 border-primary shadow-lg"
+					target="_blank"
+					rel="noopener">
 					<span class="material-symbols-outlined text-[20px]">download</span>
 					<span>Ver Mesa Directiva</span>
-				</button>
+				</a>
 			</div>
 		</div>
 		<div class="border-b border-slate-200 dark:border-slate-800 mb-8 overflow-x-auto">
-			<div class="flex gap-8">
+			<div class="flex gap-8" data-campus-filters>
 				<button
-					class="flex flex-col items-center justify-center border-b-[3px] border-primary text-slate-900 dark:text-slate-100 pb-4 pt-2">
+					class="flex flex-col items-center justify-center border-b-[3px] border-primary text-slate-900 dark:text-slate-100 pb-4 pt-2"
+					data-filter="all"
+					aria-pressed="true">
 					<span class="text-sm font-bold leading-normal tracking-wide px-2">TODOS</span>
 				</button>
 				<button
-					class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 hover:text-primary pb-4 pt-2 transition-all">
+					class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 hover:text-primary pb-4 pt-2 transition-all"
+					data-filter="uan"
+					aria-pressed="false">
 					<span class="text-sm font-bold leading-normal tracking-wide px-2">UAN</span>
 				</button>
 				<button
-					class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 hover:text-primary pb-4 pt-2 transition-all">
+					class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 hover:text-primary pb-4 pt-2 transition-all"
+					data-filter="udg"
+					aria-pressed="false">
 					<span class="text-sm font-bold leading-normal tracking-wide px-2">UDG</span>
 				</button>
 				<button
-					class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 hover:text-primary pb-4 pt-2 transition-all">
+					class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 hover:text-primary pb-4 pt-2 transition-all"
+					data-filter="uach"
+					aria-pressed="false">
 					<span class="text-sm font-bold leading-normal tracking-wide px-2">UACH</span>
 				</button>
 			</div>
 		</div>
 		<div class="space-y-12">
-			<section>
+			<section data-campus="uan">
 				<div class="flex items-center gap-4 mb-6">
 					<div class="bg-primary/10 p-2 rounded-lg">
 						<span class="material-symbols-outlined text-primary">account_balance</span>
@@ -203,7 +214,7 @@
 					</div>
 				</div>
 			</section>
-			<section>
+			<section data-campus="udg">
 				<div class="flex items-center gap-4 mb-6">
 					<div class="bg-primary/10 p-2 rounded-lg">
 						<span class="material-symbols-outlined text-primary">school</span>
@@ -242,7 +253,7 @@
 					</div>
 				</div>
 			</section>
-			<section>
+			<section data-campus="uach">
 				<div class="flex items-center gap-4 mb-6">
 					<div class="bg-primary/10 p-2 rounded-lg">
 						<span class="material-symbols-outlined text-primary">foundation</span>
@@ -320,4 +331,45 @@
 			</div>
 		</div>
 	</main>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const filterBar = document.querySelector('[data-campus-filters]');
+			const filterButtons = filterBar ? Array.from(filterBar.querySelectorAll('[data-filter]')) : [];
+			const sections = Array.from(document.querySelectorAll('[data-campus]'));
+
+			if (!filterBar || filterButtons.length === 0) {
+				return;
+			}
+
+			const activeClasses = ['border-primary', 'text-slate-900', 'dark:text-slate-100'];
+			const inactiveClasses = ['border-transparent', 'text-slate-500', 'dark:text-slate-400'];
+
+			const setActiveButton = (activeButton) => {
+				filterButtons.forEach((button) => {
+					const isActive = button === activeButton;
+					button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+					activeClasses.forEach((className) => button.classList.toggle(className, isActive));
+					inactiveClasses.forEach((className) => button.classList.toggle(className, !isActive));
+				});
+			};
+
+			const applyFilter = (filter) => {
+				sections.forEach((section) => {
+					const matches = filter === 'all' || section.dataset.campus === filter;
+					section.classList.toggle('hidden', !matches);
+				});
+			};
+
+			filterButtons.forEach((button) => {
+				button.addEventListener('click', () => {
+					const filter = button.dataset.filter || 'all';
+					setActiveButton(button);
+					applyFilter(filter);
+				});
+			});
+
+			setActiveButton(filterButtons[0]);
+			applyFilter('all');
+		});
+	</script>
 @endsection
