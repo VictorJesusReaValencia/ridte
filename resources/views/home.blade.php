@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'RIDTE - Consorcio Global para la Innovación en Tecnología Educativa')
+@section('title', 'RIDTE - Red para la investigación y el desarrollo de la Tecnología educativa')
 
 @section('content')
     <section class="relative pt-16 pb-24 px-4 border-b border-slate-200 dark:border-slate-800">
