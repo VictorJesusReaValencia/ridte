@@ -33,12 +33,12 @@
                     </div>
                     <div class="flex flex-wrap gap-6 pt-4">
                         <a class="bg-primary text-white px-10 py-5 font-sans text-xs font-bold uppercase tracking-widest hover:bg-blue-700 transition-all flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                            href="#corpus" style="">
+                            href="{{ route('investigacion') }}" style="">
                             Conoce nuestros proyectos <span class="material-symbols-outlined !text-sm" aria-hidden="true"
                                 style="">article</span>
                         </a>
                         <a class="border border-slate-300 dark:border-slate-700 px-10 py-5 font-sans text-xs font-bold uppercase tracking-widest hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                            href="#corpus" style="">
+                            href="{{ route('cuerpos-academicos') }}" style="">
                             Ver Directorio <span class="material-symbols-outlined !text-sm" aria-hidden="true"
                                 style="">database</span>
                         </a>

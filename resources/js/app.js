@@ -12,12 +12,15 @@ const getPreferredTheme = () => {
 	return 'light';
 };
 
+const getCurrentTheme = () => (root.classList.contains('dark') ? 'dark' : 'light');
+
 const applyTheme = (theme) => {
 	if (theme === 'dark') {
 		root.classList.add('dark');
 	} else {
 		root.classList.remove('dark');
 	}
+	root.classList.toggle('hs-dark-mode-active', theme === 'dark');
 	if (themeSwitch) {
 		themeSwitch.checked = theme === 'dark';
 	}
@@ -32,3 +35,22 @@ if (themeSwitch) {
 		applyTheme(nextTheme);
 	});
 }
+
+document.addEventListener('click', (event) => {
+	const button = event.target.closest('[data-hs-theme-click-value]');
+	if (!button) {
+		return;
+	}
+	const requestedTheme = button.dataset.hsThemeClickValue;
+	const currentTheme = getCurrentTheme();
+	const nextTheme =
+		requestedTheme === currentTheme
+			? currentTheme === 'dark'
+				? 'light'
+				: 'dark'
+			: requestedTheme;
+	if (nextTheme === 'light' || nextTheme === 'dark') {
+		localStorage.setItem(storageKey, nextTheme);
+		applyTheme(nextTheme);
+	}
+});

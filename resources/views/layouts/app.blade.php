@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>@yield('title', 'RIDTE - Consorcio Global para la Innovación en Tecnología Educativa')</title>
+    <link rel="icon" type="image/webp" href="{{ asset('images/logo-ridte.webp') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap"
