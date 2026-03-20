@@ -52,9 +52,8 @@
                         <figcaption
                             class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-900 p-6 border border-slate-100 dark:border-slate-800 shadow-xl max-w-xs">
                             <p class="font-sans text-[10px] uppercase tracking-widest text-primary font-bold mb-2"
-                                style="">Ejemplo de texto</p>
-                            <p class="text-xs text-slate-500 leading-relaxed italic" style="">Fig 1.1:
-                                lore ipsum dolor sit amet .</p>
+                                style="">UAN</p>
+                            <p class="text-xs text-slate-500 leading-relaxed italic" style="">Universidad Autónoma de Nayarit</p>
                         </figcaption>
                     </figure>
                     <div class="grid grid-cols-2 gap-4 pt-12">
