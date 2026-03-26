@@ -259,7 +259,7 @@
 						<span class="material-symbols-outlined text-primary">foundation</span>
 					</div>
 					<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">
-						Universidad Autónoma de Chihuahua (UACH)
+						Universidad Autónoma de Coahuila (UACH)
 					</h2>
 					<div class="h-[1px] flex-1 bg-slate-200 dark:bg-slate-800 ml-4"></div>
 				</div>
